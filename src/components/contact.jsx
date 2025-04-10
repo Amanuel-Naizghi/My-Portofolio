@@ -3,6 +3,7 @@ import github from '../assets/github.png';
 import linkedin from '../assets/linkedin.png';
 import x from '../assets/x.png';
 import { useState } from 'react';
+import emailjs from 'emailjs-com';
 
 
 export default function ContactMe() {
@@ -48,7 +49,7 @@ export default function ContactMe() {
                 <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">
                     Contact Me
                 </h1>
-                <div className="flex flex-col lg:flex lg:space-x-8 space-y-4 justify-center w-full max-w-5xl mx-auto">
+                <div className="flex flex-col lg:flex-row lg:space-x-8 lg:space-y-0 space-y-4 justify-center w-full max-w-5xl mx-auto">
                     <div className="rounded-[10px] border-2 border-black-700 p-6 flex flex-col lg:w-[300px]">
                         <h2 className="text-2xl font-semibold text-gray-800 mb-4">
                             Contact me for Collaboration
@@ -73,6 +74,7 @@ export default function ContactMe() {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                             <input
                             type="text"
+                            name="name"
                             placeholder="Name"
                             value={formData.name}
                             onChange={handleChange}
@@ -81,6 +83,7 @@ export default function ContactMe() {
                             />
                             <input
                             type="email"
+                            name="email"
                             placeholder="Email"
                             value={formData.email}
                             onChange={handleChange}
@@ -91,6 +94,7 @@ export default function ContactMe() {
                         <div className="mb-6">
                             <textarea
                             placeholder="Your Message"
+                            name="message"
                             value={formData.message}
                             onChange={handleChange}
                             rows="6"
