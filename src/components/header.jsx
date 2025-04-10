@@ -9,12 +9,8 @@ export default function Header() {
           aria-label="Global"
         >
           <div className="flex items-center gap-x-4 lg:gap-x-12">
-            <Link
-              to="/about"
-              href="#"
-              className="text-sm font-semibold border-b-2 border-transparent hover:border-blue-500 hover:text-blue-500 lg:px-5"
-            >
-              About
+            <Link to="/">
+                <img className="hover:blur-[0.8px] pb-[8px]" src={homeIcon} alt="Home" />
             </Link>
             <Link
               to="/projects"
@@ -37,8 +33,12 @@ export default function Header() {
             >
               Contact
             </Link>
-            <Link to="/">
-                <img className="hover:blur-[0.8px] pb-[8px]" src={homeIcon} alt="Home" />
+            <Link
+              to="/about"
+              href="#"
+              className="text-sm font-semibold border-b-2 border-transparent hover:border-blue-500 hover:text-blue-500 lg:px-5"
+            >
+              About
             </Link>
           </div>
         </nav>
