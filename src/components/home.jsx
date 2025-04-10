@@ -47,8 +47,12 @@ export default function Home(){
                             <button className="border border-black lg:text-[1rem] text-[0.8rem] text-black px-4 py-2 rounded-full hover:bg-[#797A7E] hover:text-white hover:border-white">Contact Info</button>
                         </div>
                         <div className="flex justify-center space-x-7 mt-5">
-                            <a href="https://github.com/Amanuel-Naizghi" className="hover:blur-[0.8px] rounded-full"><img className="w-[50px] h-[50px]" src={github} alt="github" /></a>
-                            <a href="https://www.linkedin.com/in/amanuel-tesfatsion" className="hover:blur-[0.8px] rounded-full"><img className="w-[57px] h-[57px]" src={linkedin} alt="linkedin" /></a>
+                            <a href="https://github.com/Amanuel-Naizghi" className="hover:blur-[0.8px] rounded-full">
+                                <img className="w-[50px] h-[50px]" src={github} alt="github" />
+                            </a>
+                            <a href="https://www.linkedin.com/in/amanuel-tesfatsion" className="hover:blur-[0.8px] rounded-full">
+                                <img className="w-[57px] h-[57px]" src={linkedin} alt="linkedin" />
+                            </a>
                         </div>
                     </div>
                 </div>

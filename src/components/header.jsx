@@ -1,4 +1,5 @@
 import {Link} from 'react-router-dom';
+import homeIcon from '../assets/home.png';
 
 export default function Header() {
     return (
@@ -7,7 +8,7 @@ export default function Header() {
           className="sticky flex items-center justify-center lg:justify-end p-6 px-3 lg:px-8"
           aria-label="Global"
         >
-          <div className="flex gap-x-4 lg:gap-x-12">
+          <div className="flex items-center gap-x-4 lg:gap-x-12">
             <Link
               to="/about"
               href="#"
@@ -35,6 +36,9 @@ export default function Header() {
               className="text-sm font-semibold border-b-2 border-transparent hover:border-blue-500 hover:text-blue-500 lg:px-5"
             >
               Contact
+            </Link>
+            <Link to="/">
+                <img className="hover:blur-[0.8px] pb-[8px]" src={homeIcon} alt="Home" />
             </Link>
           </div>
         </nav>

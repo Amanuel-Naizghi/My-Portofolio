@@ -22,7 +22,7 @@ export default function About() {
                         className="w-full lg:h-[350px] h-[370px] w-[300px] object-cover rounded-full shadow-md"
                         />
                     </div>
-                    <div className="lg:col-span-1 bg-gray-100 flex justify-center items-center lg:h-[250px]  lg:w-full h-[250px] w-[300px] rounded-[10px]">
+                    <div className="lg:col-span-1 border-2 border-black-700 flex justify-center items-center lg:h-[250px]  lg:w-full h-[250px] w-[300px] rounded-[10px]">
                         <div className="flex flex-col items-center">
                             <div className="text-blue-500 text-4xl mb-2">
                                 <img className="h-[70px]" src={education} alt="Education" />
@@ -38,7 +38,7 @@ export default function About() {
                             </p>
                         </div>
                     </div>
-                    <div className="col-span-1 bg-gray-100 flex justify-center items-center lg:h-[250px] lg:w-[380px] rounded-[10px]">
+                    <div className="col-span-1 border-2 border-black-700 flex justify-center items-center lg:h-[250px] lg:w-[380px] rounded-[10px]">
                         <div className="flex flex-col p-[1rem]">
                             <div className="text-green-500 text-4xl mb-2 flex justify-center">
                                 <img src={passion} alt="Passion" />
