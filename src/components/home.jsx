@@ -44,7 +44,9 @@ export default function Home(){
                         </div>
                         <div className="flex space-x-4 mt-12 justify-center">
                             <button className="bg-[#797A7E] lg:text-[1rem] text-[0.8rem] text-white px-4 py-2 rounded-full hover:bg-blue-600">Download Resume</button>
-                            <button className="border border-black lg:text-[1rem] text-[0.8rem] text-black px-4 py-2 rounded-full hover:bg-[#797A7E] hover:text-white hover:border-white">Contact Info</button>
+                            <Link to="/contact">
+                                <button className="border border-black lg:text-[1rem] text-[0.8rem] text-black px-4 py-2 rounded-full hover:bg-[#797A7E] hover:text-white hover:border-white">Contact Info</button>
+                            </Link>
                         </div>
                         <div className="flex justify-center space-x-7 mt-5">
                             <a href="https://github.com/Amanuel-Naizghi" className="hover:blur-[0.8px] rounded-full">

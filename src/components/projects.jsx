@@ -16,7 +16,7 @@ export default function Projects(){
                 <p className="text-center text-gray-600 mb-4">Browse through my recent projects</p>
                 <h1 className="text-2xl font-bold text-gray-800 mb-8">Projects</h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div className="bg-[#F6F0F0] shadow-md rounded-lg p-4">
+                    <div className="bg-gray-100 shadow-md rounded-lg p-4">
                         <img src={shopCart} alt="Project Image" className="w-full h-40 object-cover rounded-t-lg"/>
                         <h2 className="text-lg font-semibold mt-4">Shop Cart</h2>
                         <p className="text-sm text-gray-600 mt-2">An amazing website for shopping items online with a nice looking UI</p>
@@ -30,7 +30,7 @@ export default function Projects(){
                         </div>
                     </div>
 
-                    <div className="bg-[#F6F0F0] shadow-md rounded-lg p-4">
+                    <div className="bg-gray-100 shadow-md rounded-lg p-4">
                         <img src={resumeBuilder} alt="Project Image" className="w-full h-40 object-cover rounded-t-lg"/>
                         <h2 className="text-lg font-semibold mt-4">Resume Builder</h2>
                         <p className="text-sm text-gray-600 mt-2">Excellent tool for generating your resume</p>
@@ -58,7 +58,7 @@ export default function Projects(){
                         </div>
                     </div>
 
-                    <div className="bg-[#F6F0F0] shadow-md rounded-lg p-4">
+                    <div className="bg-gray-100 shadow-md rounded-lg p-4">
                         <img src={todoList} alt="Project Image" className="w-full h-40 object-cover rounded-t-lg"/>
                         <h2 className="text-lg font-semibold mt-4">Todo List</h2>
                         <p className="text-sm text-gray-600 mt-2">Stay organized by managing tasks and priorities</p>
@@ -72,7 +72,7 @@ export default function Projects(){
                         </div>
                     </div>
 
-                    <div className="bg-[#F6F0F0] shadow-md rounded-lg p-4">
+                    <div className="bg-gray-100 shadow-md rounded-lg p-4">
                         <img src={ticTack} alt="Project Image" className="w-full h-40 object-cover rounded-t-lg"/>
                         <h2 className="text-lg font-semibold mt-4">Tic Tack Toe</h2>
                         <p className="text-sm text-gray-600 mt-2">Classic and fun two-player strategy game</p>
@@ -86,7 +86,7 @@ export default function Projects(){
                         </div>
                     </div>
 
-                    <div className="bg-[#F6F0F0] shadow-md rounded-lg p-4">
+                    <div className="bg-gray-100 shadow-md rounded-lg p-4">
                         <img src={memoryGame} alt="Project Image" className="w-full h-40 object-cover rounded-t-lg"/>
                         <h2 className="text-lg font-semibold mt-4">Memory Game</h2>
                         <p className="text-sm text-gray-600 mt-2">A game that challenges the mind in recalling images </p>
@@ -100,7 +100,7 @@ export default function Projects(){
                         </div>
                     </div>
 
-                    <div className="bg-[#F6F0F0] shadow-md rounded-lg p-4">
+                    <div className="bg-gray-100 shadow-md rounded-lg p-4">
                         <img src={bookStore} alt="Project Image" className="w-full h-40 object-cover rounded-t-lg"/>
                         <h2 className="text-lg font-semibold mt-4">Book Store</h2>
                         <p className="text-sm text-gray-600 mt-2">Stores books that you have read before or planning to read</p>
@@ -114,7 +114,7 @@ export default function Projects(){
                         </div>
                     </div>
 
-                    <div className="bg-[#F6F0F0] shadow-md rounded-lg p-4">
+                    <div className="bg-gray-100 shadow-md rounded-lg p-4">
                         <img src={calculator} alt="Project Image" className="w-full h-40 object-cover rounded-t-lg"/>
                         <h2 className="text-lg font-semibold mt-4">Calculator</h2>
                         <p className="text-sm text-gray-600 mt-2">Numbers are fun, get a real time calculator </p>

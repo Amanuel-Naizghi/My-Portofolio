@@ -2,6 +2,7 @@ import Header from './header';
 import github from '../assets/github.png';
 import linkedin from '../assets/linkedin.png';
 import x from '../assets/x.png';
+import tick from '../assets/icons8-tick.gif';
 import { useState } from 'react';
 import emailjs from 'emailjs-com';
 
@@ -11,7 +12,8 @@ export default function ContactMe() {
         name:'',
         email:'',
         message:''
-    })
+    });
+    const [isVisible,setIsVisible]=useState(false);
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -28,7 +30,6 @@ export default function ContactMe() {
         )
         .then((result) => {
             console.log('Email sent successfully:', result.text);
-            alert('Message sent successfully!');
         })
         .catch((error) => {
             console.error('Error sending email:', error);
@@ -37,6 +38,10 @@ export default function ContactMe() {
 
         // Clear the form
         setFormData({ name: '', email: '', message: '' });
+        setIsVisible(true);
+        setTimeout(()=>{
+            setIsVisible(false);
+        },3000);
     };
 
     return (
@@ -49,7 +54,7 @@ export default function ContactMe() {
                 <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">
                     Contact Me
                 </h1>
-                <div className="flex flex-col lg:flex-row lg:space-x-8 lg:space-y-0 space-y-4 justify-center w-full max-w-5xl mx-auto">
+                <div className="flex flex-col lg:flex-row lg:space-x-8 lg:space-y-0 space-y-4 justify-center w-full max-w-5xl mx-auto mb-[2rem]">
                     <div className="rounded-[10px] border-2 border-black-700 p-6 flex flex-col lg:w-[300px]">
                         <h2 className="text-2xl font-semibold text-gray-800 mb-4">
                             Contact me for Collaboration
@@ -111,6 +116,14 @@ export default function ContactMe() {
                         </form>
                     </div>
                 </div>
+                {
+                    isVisible&&(
+                        <div className="flex justify-center mt-[1rem]">
+                            <img className="w-[40px]" src={tick} alt="Tick" /> 
+                            <p className="mt-[8px] ml-[2px] text-gray-600 text-[1rem]">Message Submitted</p>
+                        </div>
+                    )
+                }
             </div>
         </div>
     );
