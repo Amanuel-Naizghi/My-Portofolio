@@ -44,7 +44,7 @@ export default function Projects(){
                         </div>
                     </div>
 
-                    <div className="bg-[#F6F0F0] shadow-md rounded-lg p-4">
+                    <div className="bg-gray-100 shadow-md rounded-lg p-4">
                         <img src={weather} alt="Project Image" className="w-full h-40 object-cover rounded-t-lg"/>
                         <h2 className="text-lg font-semibold mt-4">Weather App</h2>
                         <p className="text-sm text-gray-600 mt-2">Real time weather updates and forecast for any locations</p>
