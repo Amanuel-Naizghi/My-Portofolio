@@ -33,7 +33,7 @@ export default function Header() {
             >
               Contact
             </Link>
-            <Link
+             <Link
               to="/about"
               href="#"
               className="text-sm font-semibold border-b-2 border-transparent hover:border-blue-500 hover:text-blue-500 lg:px-5"

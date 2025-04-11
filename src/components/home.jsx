@@ -4,6 +4,7 @@ import profile2 from '../assets/profile-img2.jpeg';
 import Header from './header';
 import github from '../assets/github.png';
 import linkedin from '../assets/linkedin.png';
+import x from '../assets/x.png';
 import { useEffect, useState } from 'react';
 
 export default function Home(){
@@ -59,6 +60,9 @@ export default function Home(){
                             </a>
                             <a href="https://www.linkedin.com/in/amanuel-tesfatsion" className="hover:blur-[0.8px] rounded-full">
                                 <img className="w-[57px] h-[57px]" src={linkedin} alt="linkedin" />
+                            </a>
+                            <a href="https://x.com/AmanuelNaizghi" className="hover:blur-[0.8px] rounded-full pt-[8px]">
+                                <img className="w-[40px] h-[40px]" src={x} alt="X" />
                             </a>
                         </div>
                     </div>
