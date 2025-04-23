@@ -7,12 +7,16 @@ import memoryGame from '../assets/memory-game.jpg';
 import bookStore from '../assets/book-store.jpg';
 import calculator from '../assets/calculator.jpg';
 import Header from './header';
+import { ThemeContext } from './ThemeContext';
+import { useContext } from 'react';
 
 export default function Projects(){
+    const {theme}=useContext(ThemeContext);
+
     return(
         <div className="project-page">
             <Header></Header>
-            <div className="flex flex-col items-center p-4 mt-20">
+            <div className={`flex flex-col items-center p-4 mt-20 bg-${theme}`}>
                 <p className="text-center text-gray-600 mb-4">Browse through my recent projects</p>
                 <h1 className="text-2xl font-bold text-gray-800 mb-8">Projects</h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
