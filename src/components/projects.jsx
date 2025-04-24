@@ -14,11 +14,15 @@ export default function Projects(){
     const {theme}=useContext(ThemeContext);
 
     return(
-        <div className="project-page">
+        <div className={`${theme==='white'?"bg-white":"bg-black"}`}>
             <Header></Header>
-            <div className={`flex flex-col items-center p-4 mt-20 bg-${theme}`}>
-                <p className="text-center text-gray-600 mb-4">Browse through my recent projects</p>
-                <h1 className="text-2xl font-bold text-gray-800 mb-8">Projects</h1>
+            <div className={`flex flex-col items-center p-4 pt-20`}>
+                <p className={`text-center mb-4 ${theme==="white"?"text-gray-600":"text-white"}`}>
+                    Browse through my recent projects
+                </p>
+                <h1 className={`text-3xl font-bold text-center mb-8 ${theme==="white"?"text-gray-800":"text-white"}`}>
+                    Projects
+                </h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <div className="bg-gray-100 shadow-md rounded-lg p-4">
                         <img src={shopCart} alt="Project Image" className="w-full h-40 object-cover rounded-t-lg"/>

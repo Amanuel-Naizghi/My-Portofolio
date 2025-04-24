@@ -9,7 +9,7 @@ export default function Experience(){
     return(
         <div className={`${theme==='white'?"bg-white":"bg-black"}`}>
             <Header></Header>
-            <div className={`p-8 mt-[4rem] flex flex-col items-center justify-center min-h-screen` }>
+            <div className={`p-8 mt-[4rem] flex flex-col items-center min-h-screen justify-center` }>
                 <p className={`text-center mb-4 ${theme==="white"?"text-gray-600":"text-white"}`}>
                     Explore My
                 </p>        
@@ -25,7 +25,7 @@ export default function Experience(){
                             <div className="grid grid-cols-[1fr,4fr]">
                                 <img src={tick} alt="Tick" />
                                 <p className={`pl-[1rem] ${theme==="white"?"text-black":"text-white"}`}>Html</p>
-                                <p className={`col-start-2 pl-[1rem] ${theme==="white"?"text-gray-600 ":"text-gray-500"}`}>Advanced</p>
+                                <p className={`col-start-2 pl-[1rem] ${theme==="white"?"text-gray-600 ":"text-white"}`}>Advanced</p>
                             </div>
                             <div className="grid grid-cols-[1fr,4fr]">
                                 <img src={tick} alt="Tick" />

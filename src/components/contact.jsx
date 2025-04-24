@@ -1,13 +1,20 @@
 import Header from './header';
 import github from '../assets/github.png';
+import github2 from '../assets/github2.png';
 import linkedin from '../assets/linkedin.png';
+import linkedin2 from '../assets/linkedin2.png';
 import x from '../assets/x.png';
+import x2 from '../assets/x2.png';
 import tick from '../assets/icons8-tick.gif';
 import { useState } from 'react';
 import emailjs from 'emailjs-com';
+import { ThemeContext } from './ThemeContext';
+import { useContext } from 'react';
 
 
 export default function ContactMe() {
+    const {theme}=useContext(ThemeContext);
+
     const [formData,setFormData]=useState({
         name:'',
         email:'',
@@ -45,32 +52,32 @@ export default function ContactMe() {
     };
 
     return (
-        <div className="contact-me-container">
+        <div className={`${theme==='white'?"bg-white":"bg-black"}`}>
             <Header></Header>
             <div className="min-h-screen p-8 mt-[4rem]">
-                <p className="text-gray-600 text-center mb-4">
+                <p className={`text-center mb-4 ${theme==="white"?"text-gray-600":"text-white"}`}>
                     This is how you get in contact with me
                 </p>
-                <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">
+                <h1 className={`text-3xl font-bold text-center mb-8 ${theme==="white"?"text-gray-800":"text-white"}`}>
                     Contact Me
                 </h1>
                 <div className="flex flex-col lg:flex-row lg:space-x-8 lg:space-y-0 space-y-4 justify-center w-full max-w-5xl mx-auto mb-[2rem]">
                     <div className="rounded-[10px] border-2 border-black-700 p-6 flex flex-col lg:w-[300px]">
-                        <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+                        <h2 className={`text-[1.8rem] font-bold text-center mb-8 ${theme==="white"?"text-gray-800":"text-white"}`}>
                             Contact me for Collaboration
                         </h2>
-                        <p className="text-gray-600 mb-[5rem]">
+                        <p className={`text-gray-600 mb-[5rem] ${theme==="white"?"text-gray-600":"text-white"}`}>
                             Feel free to reach out to me via any of the platforms below or send me a message directly and start collaborating on something amazing
                         </p>
                         <div className="flex gap-4">
                             <a href="https://github.com/Amanuel-Naizghi" className="hover:blur-[0.8px] rounded-full">
-                                <img className="w-[35px] h-[35px]" src={github} alt="github" />
+                                <img className={`w-[35px] h-[35px] bg-white rounded-full ${theme==="black"&&"bg-white"}`} src={theme==='white'?github:github2} alt="github"  />
                             </a>
                             <a href="https://www.linkedin.com/in/amanuel-tesfatsion" className="hover:blur-[0.8px] rounded-full">
-                                <img className="w-[40px] h-[40px]" src={linkedin} alt="linkedin" />
+                                <img className={`w-[40px] h-[40px] bg-white rounded-full ${theme==="black"&&"bg-white"}`} src={theme==='white'?linkedin:linkedin2} alt="linkedin" />
                             </a>
                             <a href="https://x.com/AmanuelNaizghi" className="hover:blur-[0.8px] rounded-full pt-[5px]">
-                                <img className="w-[30px] h-[30px]" src={x} alt="X" />
+                                <img className={`bg-white  rounded-full w-[35px] h-[35px]`} src={x} alt="X" />
                             </a>
                         </div>
                     </div>

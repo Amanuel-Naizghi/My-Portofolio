@@ -19,7 +19,7 @@ export default function Header() {
             aria-label="Global"
             >
             <button className="flex item-center mr-[4rem]" onClick={toggleTheme}>
-                <img className="w-8" src={theme==='white'?dark:light} alt="light/dark" />
+                <img className="w-8 h-8" src={theme==='white'?dark:light} alt="light/dark" />
             </button>
             <button className="md:hidden" onClick={()=>setIsOpen(!isOpen)}>☰</button>
             <ul className={`gap-x-4 lg:gap-x-12 hidden md:flex`}>
