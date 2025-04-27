@@ -1,5 +1,7 @@
 import Header from './header';
-import education from '../assets/education.png';
+import eit from '../assets/eit.jpeg';
+import odin from '../assets/odin.jpeg';
+import admas from '../assets/admas.jpeg';
 import passion from '../assets/passion.png';
 import myPhoto from '../assets/my-photo.jpeg';
 import { ThemeContext } from './ThemeContext';
@@ -18,7 +20,7 @@ export default function About() {
                 <h1 className={`text-3xl font-bold text-center mb-8 ${theme==="white"?"text-gray-800":"text-white"}`}>
                     About Me
                 </h1>
-                <div className="flex flex-col lg:grid lg:grid-cols-3 gap-6 lg:h-[400px] lg:w-[800px] flex items-center">
+                <div className="flex flex-col lg:grid lg:grid-cols-3 gap-[1rem] lg:h-[400px] lg:w-[800px] flex items-center ">
                     <div className="lg:col-span-1 lg:row-span-2">
                         <img
                         src={myPhoto}
@@ -26,45 +28,74 @@ export default function About() {
                         className="w-full lg:h-[350px] h-[370px] w-[300px] object-cover rounded-full shadow-md"
                         />
                     </div>
-                    <div className="lg:col-span-1 border-2 border-black-700 flex justify-center items-center lg:h-[250px]  lg:w-full h-[250px] w-[300px] rounded-[10px]">
-                        <div className="flex flex-col items-center">
-                            <div className="text-blue-500 text-4xl mb-2">
-                                <img className="h-[70px]" src={education} alt="Education" />
-                            </div>
-                            <h2 className={`text-[1.2rem] font-bold text-center mb-8 ${theme==="white"?"text-gray-800":"text-white"}`}>
+                    <div className="lg:col-span-1 border-2 border-black-700 flex p-2 lg:h-[270px]  lg:w-[280px] h-[250px] w-[300px] rounded-[10px]">
+                        <div className="flex flex-col space-y-2">
+                            <h2 className={`text-[1.2rem] font-bold text-center mb-4 ${theme==="white"?"text-gray-800":"text-white"}`}>
                                 Education
                             </h2>
-                            <p className={`pl-[1rem] ${theme==="white"?"text-black":"text-white"}`}>
-                                B.Sc Bachelors Degree
-                            </p>
-                            <p className={`pl-[1rem] ${theme==="white"?"text-black":"text-white"}`}>
-                                Computer Science 2014-2019
-                            </p>
+                            <div className="flex">
+                                <img className="h-[50px] w-[50px]" src={eit} alt="EIT" />
+                                <div className="flex flex-col">
+                                    <p className={`pl-[1rem] ${theme==="white"?"text-black":"text-white"}`}>
+                                        B.Sc Computer Science
+                                    </p>
+                                    <em className={`pl-[1rem] ${theme==="white"?"text-gray-600":"text-white"}`}>
+                                        2014-2019
+                                    </em>
+                                </div>
+                            </div>
+                            <div className="flex">
+                                <img className="h-[50px] w-[50px]" src={admas} alt="Admas" />
+                                <div className="flex flex-col">
+                                    <p className={`pl-[1rem] ${theme==="white"?"text-black":"text-white"}`}>
+                                        Diploma in Accounting
+                                    </p>
+                                    <em className={`pl-[1rem] ${theme==="white"?"text-gray-600":"text-white"}`}>
+                                        2020-2022
+                                    </em>
+                                </div>
+                            </div>
+                            <div className="flex">
+                                <img className="h-[50px] w-[50px]" src={odin} alt="Odin" />
+                                <div className="flex flex-col">
+                                    <p className={`pl-[1rem] ${theme==="white"?"text-black":"text-white"}`}>
+                                        The Odin Projects
+                                    </p>
+                                    <p className={`pl-[1rem] ${theme==="white"?"text-gray-600":"text-white"}`}>
+                                        Full Stack Development
+                                    </p>
+                                    <em className={`pl-[1rem] ${theme==="white"?"text-gray-600":"text-white"}`}>
+                                        2024-2025
+                                    </em>
+                                </div>
+                            </div>
+                            
+                            
                         </div>
                     </div>
-                    <div className="col-span-1 border-2 border-black-700 flex justify-center items-center lg:h-[250px] lg:w-[380px] rounded-[10px]">
-                        <div className="flex flex-col p-[1rem]">
-                            <div className="text-green-500 text-4xl mb-2 flex justify-center">
-                                <img src={passion} alt="Passion" />
-                            </div>
-                            <h2 className={`text-[1.2rem] font-bold text-center mb-8 ${theme==="white"?"text-gray-800":"text-white"}`}>
+                    <div className="col-span-1 p-2 border-2 border-black-700 flex m-3  lg:h-[270px] lg:w-[340px] rounded-[10px]">
+                        <div className="flex flex-col space-y-2">
+                        
+                            <h2 className={`text-[1.2rem] font-bold text-center mb-4 ${theme==="white"?"text-gray-800":"text-white"}`}>
                                 My Passion
                             </h2>
-                            <p className={`pl-[1rem] ${theme==="white"?"text-black":"text-white"}`}>
-                                Building innovative projects that solve real-world problems
+                            <p className={`pl-[1rem] ${theme==="white"?"text-gray-600":"text-white"}`}>
+                                Building innovative projects that solve real-world problems.
                             </p>
-                            <p className={`pl-[1rem] ${theme==="white"?"text-black":"text-white"}`}>
+                            <p className={`pl-[1rem] ${theme==="white"?"text-gray-600":"text-white"}`}>
                                 Always eager to learn and grow in the tech field.
+                            </p>
+                            <p className={`pl-[1rem] ${theme==="white"?"text-gray-600":"text-white"}`}>
+                                Creating an honest and strong relationships with teammates and clients.
                             </p>
                         </div>
                     </div>
-            
                     {/* Second row, second column (spans two columns) */}
                     <div className="col-span-2 lg:h-[120px] lg:w-[670px]">
-                        <p className={`pl-[1rem] ${theme==="white"?"text-black":"text-white"}`}>
+                        <p className={`pl-[1rem] ${theme==="white"?"text-gray-600":"text-white"}`}>
                         Outside of development, I enjoy exploring the outdoors, reading, and connecting with people from different walks of life. My goal is to create meaningful impacts through technology.
                         </p>
-                        <em className={`pl-[1rem] ${theme==="white"?"text-black":"text-white"}`}>"Don’t count the days, make the days count." --- Muhammad Ali</em>
+                        <em className={`pl-[1rem] ${theme==="white"?"text-gray-600":"text-white"}`}>"Don’t count the days, make the days count." --- Muhammad Ali</em>
                     </div>
                 </div>
             </div>
