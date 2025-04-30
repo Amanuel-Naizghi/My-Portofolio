@@ -71,13 +71,13 @@ export default function ContactMe() {
                         </p>
                         <div className="flex gap-4">
                             <a href="https://github.com/Amanuel-Naizghi" className="hover:blur-[0.8px] rounded-full">
-                                <img className={`w-[35px] h-[35px] bg-white rounded-full ${theme==="black"&&"bg-white"}`} src={theme==='white'?github:github2} alt="github"  />
+                                <img className={`w-[40px] h-[40px] bg-white rounded-full ${theme==="black"&&"bg-white"}`} src={theme==='white'?github:github2} alt="github"  />
                             </a>
                             <a href="https://www.linkedin.com/in/amanuel-tesfatsion" className="hover:blur-[0.8px] rounded-full">
-                                <img className={`w-[40px] h-[40px] bg-white rounded-full ${theme==="black"&&"bg-white"}`} src={theme==='white'?linkedin:linkedin2} alt="linkedin" />
+                                <img className={`w-[35px] h-[35px] mt-[4px] bg-white rounded-[10px] ${theme==="black"&&"bg-white"}`} src={theme==='white'?linkedin:linkedin2} alt="linkedin" />
                             </a>
                             <a href="https://x.com/AmanuelNaizghi" className="hover:blur-[0.8px] rounded-full pt-[5px]">
-                                <img className={`bg-white  rounded-full w-[35px] h-[35px]`} src={x} alt="X" />
+                                <img className={`bg-white  rounded-[10px] w-[35px] h-[35px]`} src={x} alt="X" />
                             </a>
                         </div>
                     </div>

@@ -44,7 +44,7 @@ export default function Home(){
 
                     <div className="w-full lg:w-[700px] md:w-1/3 flex justify-center items-center p-4">
                         <img src={profileImage[index]} 
-                        alt="Profile Image" className="rounded-full lg:h-[350px] lg:w-[350px] w-[150px] h-[150px] object-cover"/>
+                        alt="Profile Image" className="rounded-full lg:h-[400px] lg:w-[400px] w-[200px] h-[200px] object-cover"/>
                     </div>
                                             
                     <div className={`w-full md:w-2/3 p-6 flex flex-col`}>
@@ -69,10 +69,10 @@ export default function Home(){
                                 <img className={`w-[50px] h-[50px] ${theme==="black"&&"bg-white"}`} src={theme==='white'?github:github2} alt="github" />
                             </a>
                             <a href="https://www.linkedin.com/in/amanuel-tesfatsion" className="hover:blur-[0.8px] rounded-full">
-                                <img className={`${theme==="black"?"bg-white w-[50px] h-[50px]":"w-[57px] h-[57px]"}`} src={theme==='white'?linkedin:linkedin2} alt="linkedin" />
+                                <img className={`w-[45px] h-[45px] bg-white mt-[4px] rounded-[10px]`} src={theme==='white'?linkedin:linkedin2} alt="linkedin" />
                             </a>
                             <a href="https://x.com/AmanuelNaizghi" className="hover:blur-[0.8px] rounded-full pt-[8px]">
-                                <img className={`w-[40px] h-[40px] bg-white`} src={x} alt="X" />
+                                <img className={`w-[40px] h-[40px] rounded-[10px] bg-white`} src={x} alt="X" />
                             </a>
                         </div>
                     </div>

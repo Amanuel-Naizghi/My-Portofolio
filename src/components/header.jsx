@@ -4,6 +4,8 @@ import homeIcon from '../assets/home.png';
 import homeIcon2 from '../assets/home2.png';
 import light from '../assets/light.png';
 import dark from '../assets/dark.png';
+import logo from '../assets/logo.png';
+import logo2 from '../assets/logo2.png';
 import { ThemeContext } from './ThemeContext';
 
 
@@ -18,6 +20,7 @@ export default function Header() {
             className={`sticky flex justify-end lg:justify-end p-6 px-3 lg:px-8 h-16 ${theme==='white'?"bg-white text-black":"bg-black text-white"}`}
             aria-label="Global"
             >
+            <img src={theme==='white'?logo:logo2} alt="logo" className="mr-auto h-[25px]"/>
             <button className="flex item-center mr-[4rem]" onClick={toggleTheme}>
                 <img className="w-8 h-8" src={theme==='white'?dark:light} alt="light/dark" />
             </button>
