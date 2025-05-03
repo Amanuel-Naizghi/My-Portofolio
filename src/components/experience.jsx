@@ -26,7 +26,7 @@ export default function Experience(){
                             <div className="grid grid-cols-[1fr,4fr]">
                                 <img src={theme==='white'?tick:tick2} alt="Tick" />
                                 <p className={`pl-[1rem] ${theme==="white"?"text-black":"text-white"}`}>Html</p>
-                                <p className={`col-start-2 pl-[1rem] ${theme==="white"?"text-gray-600 ":"text-white"}`}>Advanced</p>
+                                <p className={`col-start-2 pl-[1rem] ${theme==="white"?"text-gray-600 ":"text-gray-500"}`}>Advanced</p>
                             </div>
                             <div className="grid grid-cols-[1fr,4fr]">
                                 <img src={theme==='white'?tick:tick2} alt="Tick" />
