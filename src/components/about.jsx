@@ -4,6 +4,7 @@ import { ThemeContext } from './ThemeContext';
 import sait from '../assets/sait-logo.svg';
 import eit from '../assets/eit.jpeg';
 import odin from '../assets/odin.jpeg';
+import admas from '../assets/admas.jpeg';
 
 const education = [
     {
@@ -22,6 +23,12 @@ const education = [
         accent: 'bg-amber-100 text-amber-900 dark:bg-amber-400/10 dark:text-amber-200',
     },
     {
+        school: 'Admas University',
+        program: 'Diploma in Accounting',
+        dates: '2020 - 2022',
+        image: admas,
+    },
+    {
         school: 'Eritrea Institute of Technology',
         program: 'B.Sc. in Computer Science',
         dates: '2014 - 2019',
@@ -34,6 +41,23 @@ const values = [
     { title: 'Build with purpose', text: 'I enjoy building projects that solve real-world problems.', icon: FiCode },
     { title: 'Stay curious', text: 'There is always something new to learn, try, and improve.', icon: FiBookOpen },
     { title: 'Grow together', text: 'Honest communication and strong relationships matter to me.', icon: FiUsers },
+];
+
+const workExperience = [
+    {
+        role: 'Accountant',
+        employer: 'AMMARS Groups & other private companies',
+        dates: 'Nov 2022 - Jul 2024',
+        summary: 'Organized financial transactions and supported the Finance Manager in preparing financial statements.',
+        tools: ['Odoo', 'QuickBooks', 'Peachtree'],
+    },
+    {
+        role: 'IT and System Admin',
+        employer: 'Ministry of Education, Eritrea',
+        dates: 'Sep 2018 - Jun 2022',
+        summary: 'Troubleshot hardware and software, provided first- and second-line staff support, and administered user databases.',
+        tools: [],
+    },
 ];
 
 export default function About() {
@@ -74,6 +98,20 @@ export default function About() {
                     </section>
 
                     <div className="space-y-5">
+                        <section aria-labelledby="work-experience-heading" className="rounded-3xl border border-violet-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-950 sm:p-6">
+                            <h3 id="work-experience-heading" className="mb-5 text-xl font-bold">Experience beyond the code</h3>
+                            <ol className="space-y-5">
+                                {workExperience.map(job => (
+                                    <li key={job.employer} className="border-l-2 border-violet-200 pl-4 dark:border-slate-700">
+                                        <h4 className="font-bold">{job.role}</h4>
+                                        <p className="mt-1 text-sm font-medium text-violet-700 dark:text-blue-300">{job.employer}</p>
+                                        <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">{job.dates}</p>
+                                        <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300">{job.summary}</p>
+                                        {job.tools.length > 0 && <ul aria-label="Accounting software" className="mt-3 flex flex-wrap gap-2">{job.tools.map(tool => <li key={tool} className="rounded-lg bg-amber-100 px-2.5 py-1 text-xs font-medium text-amber-900 dark:bg-slate-800 dark:text-amber-200">{tool}</li>)}</ul>}
+                                    </li>
+                                ))}
+                            </ol>
+                        </section>
                         <section aria-labelledby="values-heading" className="rounded-3xl border border-violet-200 bg-violet-50 p-5 dark:border-slate-800 dark:bg-slate-950 sm:p-6">
                             <h3 id="values-heading" className="mb-5 text-xl font-bold">What keeps me going</h3>
                             <ul className="space-y-5">

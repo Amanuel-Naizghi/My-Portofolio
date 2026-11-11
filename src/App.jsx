@@ -1,5 +1,6 @@
 import Home from './components/home';
 import Header from './components/header';
+import Footer from './components/footer';
 import Projects from './components/projects';
 import About from './components/about';
 import Experience from './components/experience';
@@ -20,6 +21,7 @@ function App() {
           <Route path='/experience' element={<Experience/>}/>
           <Route path='/contact' element={<ContactMe/>}/>
         </Routes>
+        <Footer />
       </Router>
     </ThemeProvider>
   )
