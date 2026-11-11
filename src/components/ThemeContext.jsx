@@ -6,7 +6,7 @@ const ThemeProvider=({children})=>{
     const [theme,setTheme]=useState('white');
 
     const toggleTheme=()=>{
-        theme==='white'?setTheme('dark'):setTheme('white');
+        theme==='white'?setTheme('black'):setTheme('white');
     }
 
     return(

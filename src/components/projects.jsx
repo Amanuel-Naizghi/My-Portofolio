@@ -6,7 +6,6 @@ import ticTack from '../assets/tic-tac.jpg';
 import memoryGame from '../assets/memory-game.jpg';
 import bookStore from '../assets/book-store.jpg';
 import calculator from '../assets/calculator.jpg';
-import Header from './header';
 import { ThemeContext } from './ThemeContext';
 import { useContext } from 'react';
 
@@ -15,7 +14,6 @@ export default function Projects(){
 
     return(
         <div className={`${theme==='white'?"bg-white":"bg-black"}`}>
-            <Header></Header>
             <div className={`flex flex-col items-center p-4 pt-20`}>
                 <p className={`text-center mb-4 ${theme==="white"?"text-gray-600":"text-white"}`}>
                     Browse through my recent projects

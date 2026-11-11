@@ -1,4 +1,3 @@
-import Header from './header';
 import eit from '../assets/eit.jpeg';
 import odin from '../assets/odin.jpeg';
 import admas from '../assets/admas.jpeg';
@@ -12,7 +11,6 @@ export default function About() {
 
     return (
       <div className={`${theme==='white'?"bg-white":"bg-black"}`}>
-             <Header></Header>
              <div className="p-8 pt-5 mt-[4rem] flex flex-col items-center justify-center min-h-screen">
                 <p className={`text-center mb-4 ${theme==="white"?"text-gray-600":"text-white"}`}>
                     Welcome to my portfolio!

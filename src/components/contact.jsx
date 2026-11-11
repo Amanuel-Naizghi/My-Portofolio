@@ -1,4 +1,3 @@
-import Header from './header';
 import github from '../assets/github.png';
 import github2 from '../assets/github2.png';
 import linkedin from '../assets/linkedin.png';
@@ -53,7 +52,6 @@ export default function ContactMe() {
 
     return (
         <div className={`${theme==='white'?"bg-white":"bg-black"}`}>
-            <Header></Header>
             <div className="min-h-screen p-8 mt-[4rem]">
                 <p className={`text-center mb-4 ${theme==="white"?"text-gray-600":"text-white"}`}>
                     This is how you get in contact with me

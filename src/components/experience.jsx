@@ -1,4 +1,3 @@
-import Header from './header';
 import tick from '../assets/tick.png';
 import tick2 from '../assets/tick2.png';
 import { useContext } from 'react';
@@ -9,7 +8,6 @@ export default function Experience(){
 
     return(
         <div className={`${theme==='white'?"bg-white":"bg-black"}`}>
-            <Header></Header>
             <div className={`p-8 mt-[4rem] flex flex-col items-center min-h-screen justify-center` }>
                 <p className={`text-center mb-4 ${theme==="white"?"text-gray-600":"text-white"}`}>
                     Explore My

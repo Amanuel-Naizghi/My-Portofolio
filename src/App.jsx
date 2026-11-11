@@ -1,4 +1,5 @@
 import Home from './components/home';
+import Header from './components/header';
 import Projects from './components/projects';
 import About from './components/about';
 import Experience from './components/experience';
@@ -11,6 +12,7 @@ function App() {
   return (
     <ThemeProvider>
       <Router>
+        <Header />
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/about' element={<About/>}/>

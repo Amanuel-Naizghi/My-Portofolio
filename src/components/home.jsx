@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom';
 import profile1 from '../assets/profile-img1.jpeg';
 import profile2 from '../assets/profile-img2.jpeg';
-import Header from './header';
+
 import github from '../assets/github.png';
 import github2 from '../assets/github2.png';
 import linkedin from '../assets/linkedin.png';
@@ -34,19 +34,19 @@ export default function Home(){
 
         return ()=> clearTimeout(timer);
     },[profileImage.length,index])
-    
+
 
     return(    
-        <div className={`${theme==='white'?"bg-white":"bg-black"}`}>
-            <Header></Header>
-            <div className={`flex flex-col items-center justify-center min-h-screen `}>
+        <main id="main-content" className={`${theme==='white'?"bg-white":"bg-black"}`}>
+
+            <div id="top" className={`flex flex-col items-center justify-center min-h-screen `}>
                 <div className="flex flex-col md:flex-row rounded-lg overflow-hidden h:50 lg:h-100 mt-20">
 
                     <div className="w-full lg:w-[700px] md:w-1/3 flex justify-center items-center p-4">
                         <img src={profileImage[index]} 
                         alt="Profile Image" className="rounded-full lg:h-[400px] lg:w-[400px] w-[200px] h-[200px] object-cover"/>
                     </div>
-                                            
+
                     <div className={`w-full md:w-2/3 p-6 flex flex-col`}>
                         <div>
                             <p className={`m-4 text-center lg:text-2xl text-[17px] ${theme==='white'?"text-gray-600":"text-white"}`}>Hello, I'm</p>
@@ -78,10 +78,10 @@ export default function Home(){
                     </div>
                 </div>
             </div>
-            <Experience/>
-            <Projects/>
-            <About/>
-            <ContactMe/>
-        </div>
+            <section id="work" aria-label="Selected work"><Projects/></section>
+            <section id="skills" aria-label="Skills"><Experience/></section>
+            <section id="about" aria-label="About me"><About/></section>
+            <section id="contact" aria-label="Contact"><ContactMe/></section>
+        </main>
     )
 }
