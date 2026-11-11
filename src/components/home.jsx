@@ -1,87 +1,55 @@
-import {Link} from 'react-router-dom';
-import profile1 from '../assets/profile-img1.jpeg';
-import profile2 from '../assets/profile-img2.jpeg';
-
+﻿import { useContext } from 'react';
+import profile from '../assets/profile-img1.jpeg';
 import github from '../assets/github.png';
-import github2 from '../assets/github2.png';
 import linkedin from '../assets/linkedin.png';
-import linkedin2 from '../assets/linkedin2.png';
-import x from '../assets/x.png';
-import { useContext, useEffect, useState } from 'react';
 import { ThemeContext } from './ThemeContext';
 import Experience from './experience';
 import Projects from './projects';
 import About from './about';
 import ContactMe from './contact';
 
+export default function Home() {
+    const { theme } = useContext(ThemeContext);
+    const isDarkMode = theme !== 'white';
 
-export default function Home(){
-    const [index,setIndex]=useState(0);
-    const profileImage=[profile1,profile2];
-
-    const {theme}=useContext(ThemeContext);
-
-    const resumeURL="https://my-portofolio-psi-azure.vercel.app/AMANUEL-TESFATSION.pdf";
-
-    useEffect(()=>{
-        const changePhoto=()=>{
-            (index===0)?setIndex(1):setIndex(0);
-        }
-
-        const timer=setTimeout(() => {
-            changePhoto();
-        }, 7000);
-
-        return ()=> clearTimeout(timer);
-    },[profileImage.length,index])
-
-
-    return(    
-        <main id="main-content" className={`${theme==='white'?"bg-white":"bg-black"}`}>
-
-            <div id="top" className={`flex flex-col items-center justify-center min-h-screen `}>
-                <div className="flex flex-col md:flex-row rounded-lg overflow-hidden h:50 lg:h-100 mt-20">
-
-                    <div className="w-full lg:w-[700px] md:w-1/3 flex justify-center items-center p-4">
-                        <img src={profileImage[index]} 
-                        alt="Profile Image" className="rounded-full lg:h-[400px] lg:w-[400px] w-[200px] h-[200px] object-cover"/>
+    return (
+        <main id="main-content" className={`${isDarkMode ? 'dark bg-black text-white' : 'bg-orange-50 text-slate-900'} min-h-screen`}>
+            <section id="top" aria-labelledby="hero-title" className="relative isolate mx-auto grid max-w-6xl items-center gap-10 overflow-hidden px-6 py-12 md:grid-cols-[1.2fr_1fr] md:gap-12 md:px-8 md:py-20">
+                <div className="motion-safe:animate-enter">
+                    <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-violet-200 bg-violet-100 px-3 py-1.5 text-xs font-semibold text-violet-800 dark:border-slate-700 dark:bg-slate-900 dark:text-blue-300">
+                        <span aria-hidden="true">&lt;/&gt;</span> Ideas into interfaces. And beyond.
+                    </p>
+                    <p className="mb-2 text-lg text-slate-600 dark:text-slate-300">Hello, I'm Amanuel Tesfatsion</p>
+                    <h1 id="hero-title" className="text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+                        Full Stack<br /><span className="text-violet-700 dark:text-blue-400">Developer<span className="text-orange-600 dark:text-blue-300">.</span></span>
+                    </h1>
+                    <p className="mt-5 max-w-lg text-base leading-relaxed text-slate-600 dark:text-slate-300 sm:text-lg">
+                        I build responsive web applications, from thoughtful React interfaces to Node.js APIs, databases, and cloud deployment.
+                    </p>
+                    <div className="mt-7 flex flex-wrap gap-3">
+                        <a href="#work" className="inline-flex min-h-12 items-center gap-3 rounded-xl bg-violet-700 px-5 py-3 font-semibold text-white transition hover:-translate-y-1 hover:bg-violet-800 focus-visible:outline-violet-500 motion-reduce:transform-none motion-reduce:transition-none dark:bg-blue-600 dark:hover:bg-blue-700">
+                            Explore my work <span aria-hidden="true">&rarr;</span>
+                        </a>
+                        <a href="/AMANUEL-TESFATSION.pdf" className="inline-flex min-h-12 items-center rounded-xl border border-slate-300 bg-white/70 px-5 py-3 font-semibold transition hover:-translate-y-1 hover:bg-white focus-visible:outline-violet-500 motion-reduce:transform-none motion-reduce:transition-none dark:border-slate-700 dark:bg-slate-900 dark:hover:bg-slate-800">View resume</a>
                     </div>
-
-                    <div className={`w-full md:w-2/3 p-6 flex flex-col`}>
-                        <div>
-                            <p className={`m-4 text-center lg:text-2xl text-[17px] ${theme==='white'?"text-gray-600":"text-white"}`}>Hello, I'm</p>
-                            <h2 className={`lg:text-4xl font-bold text-center text-[30px] ${theme==='white'?"text-black":"text-white"}`}>Amanuel Tesfatsion</h2>
-                            <p className={`text-gray-600 mt-4 text-center lg:text-2xl text-[20px] ${theme==='white'?"text-black":"text-white"}`}>
-                                <span className="text-blue-600">Front End Developer</span> with expertise in building responsive and interactive user interfaces. Passionate about creating intuitive user experiences.
-                            </p>
-                        </div>
-                        <div className="flex space-x-4 mt-12 justify-center">
-                            <a href={resumeURL}>
-                                <button className={`${theme==='white'?"bg-[#797A7E] hover:bg-blue-600":"bg-blue-600 hover:bg-blue-800"} lg:text-[1rem] text-[0.8rem] text-white px-4 py-2 rounded-full `}>Download Resume</button>
-                            </a>
-
-                            <Link to="/contact">
-                                <button className={`${theme==='white'?"border border-black hover:bg-[#797A7E] hover:text-white hover:border-white`":"bg-white hover:bg-blue-600"} lg:text-[1rem] text-[0.8rem] text-black px-4 py-2 rounded-full hover:bg-[#797A7E] hover:text-white hover:border-white`}>Contact Info</button>
-                            </Link>
-                        </div>
-                        <div className="flex justify-center space-x-7 mt-5">
-                            <a href="https://github.com/Amanuel-Naizghi" className="hover:blur-[0.8px] rounded-full">
-                                <img className={`w-[50px] h-[50px] ${theme==="black"&&"bg-white"}`} src={theme==='white'?github:github2} alt="github" />
-                            </a>
-                            <a href="https://www.linkedin.com/in/amanuel-tesfatsion" className="hover:blur-[0.8px] rounded-full">
-                                <img className={`w-[45px] h-[45px] bg-white mt-[4px] rounded-[10px]`} src={theme==='white'?linkedin:linkedin2} alt="linkedin" />
-                            </a>
-                            <a href="https://x.com/AmanuelNaizghi" className="hover:blur-[0.8px] rounded-full pt-[8px]">
-                                <img className={`w-[40px] h-[40px] rounded-[10px] bg-white`} src={x} alt="X" />
-                            </a>
-                        </div>
+                    <div className="mt-6 flex flex-wrap items-center gap-4">
+                        <a href="https://github.com/Amanuel-Naizghi" className="rounded-full bg-white p-2 transition-transform hover:-translate-y-1 focus-visible:outline-violet-500 motion-reduce:transform-none motion-reduce:transition-none"><img src={github} alt="GitHub" className="h-6 w-6" /></a>
+                        <a href="https://www.linkedin.com/in/amanuel-tesfatsion" className="rounded-full bg-white p-2 transition-transform hover:-translate-y-1 focus-visible:outline-violet-500 motion-reduce:transform-none motion-reduce:transition-none"><img src={linkedin} alt="LinkedIn" className="h-6 w-6" /></a>
+                        <span className="text-xs font-medium text-slate-600 dark:text-slate-300">AWS Certified Cloud Practitioner</span>
                     </div>
                 </div>
-            </div>
-            <section id="work" aria-label="Selected work"><Projects/></section>
-            <section id="skills" aria-label="Skills"><Experience/></section>
-            <section id="about" aria-label="About me"><About/></section>
-            <section id="contact" aria-label="Contact"><ContactMe/></section>
+
+                <div className="relative mx-auto w-full max-w-sm px-5 pb-6 pt-3 motion-safe:animate-enter">
+                    <div aria-hidden="true" className="absolute inset-8 -rotate-6 rounded-[3rem] bg-violet-200 dark:bg-slate-900" />
+                    <div aria-hidden="true" className="absolute right-1 top-0 flex h-16 w-16 rotate-12 items-center justify-center rounded-2xl bg-amber-200 font-mono text-xl font-bold text-violet-900 dark:bg-slate-800 dark:text-blue-300 motion-safe:animate-bob">&lt;/&gt;</div>
+                    <img src={profile} alt="Amanuel Tesfatsion" className="relative aspect-square w-full rounded-[2.5rem] border-4 border-white object-cover shadow-lg transition-transform duration-300 hover:rotate-2 motion-reduce:transform-none motion-reduce:transition-none dark:border-slate-800" />
+                    <p className="relative -mt-5 ml-4 w-fit -rotate-3 rounded-xl border border-orange-200 bg-white px-4 py-3 text-sm font-semibold text-slate-800 shadow-sm dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100">Frontend + Backend + a little curiosity</p>
+                </div>
+            </section>
+            <section id="work" aria-label="Selected work"><Projects /></section>
+            <section id="skills" aria-label="Skills"><Experience /></section>
+            <section id="about" aria-label="About me"><About /></section>
+            <section id="contact" aria-label="Contact"><ContactMe /></section>
         </main>
-    )
+    );
 }

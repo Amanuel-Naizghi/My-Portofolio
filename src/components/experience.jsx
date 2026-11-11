@@ -7,16 +7,16 @@ export default function Experience(){
     const {theme}=useContext(ThemeContext);
 
     return(
-        <div className={`${theme==='white'?"bg-white":"bg-black"}`}>
-            <div className={`p-8 mt-[4rem] flex flex-col items-center min-h-screen justify-center` }>
+        <div className={`${theme !== 'white' ? 'dark' : ''} ${theme==='white'?"bg-orange-50":"bg-black"}`}>
+            <div className={`mx-auto max-w-6xl px-5 py-12 md:px-8 md:py-14 flex flex-col items-center` }>
                 <p className={`text-center mb-4 ${theme==="white"?"text-gray-600":"text-white"}`}>
                     Explore My
                 </p>        
                 <h1 className={`text-3xl font-bold text-center mb-8 ${theme==="white"?"text-gray-800":"text-white"}`}>
                     Experience
                 </h1>
-                <div className="flex-cols lg:flex">
-                    <div className="flex flex-col rounded-[10px] border-2 border-black-700 lg:w-[450px] p-3 lg:mr-[1.5rem] ">
+                <div className="grid w-full gap-5 md:grid-cols-2">
+                    <div className="flex flex-col rounded-[10px] border border-violet-200 bg-white/60 shadow-sm dark:border-slate-800 dark:bg-black p-5 sm:p-6 ">
                         <h1 className={`text-[1.2rem] font-bold text-center mb-8 ${theme==="white"?"text-gray-800":"text-white"}`}>
                             Frontend Development
                         </h1>
@@ -54,7 +54,7 @@ export default function Experience(){
                         </div>
                     </div>
                     
-                    <div className="flex flex-col rounded-[10px] border-2 border-black-700 lg:w-[450px] p-3 mt-[2rem] lg:mt-[0rem]">
+                    <div className="flex flex-col rounded-[10px] border border-violet-200 bg-white/60 shadow-sm dark:border-slate-800 dark:bg-black p-5 sm:p-6">
                         <h1 className={`text-[1.2rem] font-bold text-center mb-8 ${theme==="white"?"text-gray-800":"text-white"}`}>
                             Data Base & Other Programming Languages
                         </h1>

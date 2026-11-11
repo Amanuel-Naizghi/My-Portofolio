@@ -51,8 +51,8 @@ export default function ContactMe() {
     };
 
     return (
-        <div className={`${theme==='white'?"bg-white":"bg-black"}`}>
-            <div className="min-h-screen p-8 mt-[4rem]">
+        <div className={`${theme !== 'white' ? 'dark' : ''} ${theme==='white'?"bg-orange-50":"bg-black"}`}>
+            <div className="mx-auto max-w-6xl px-5 py-12 md:px-8 md:py-14">
                 <p className={`text-center mb-4 ${theme==="white"?"text-gray-600":"text-white"}`}>
                     This is how you get in contact with me
                 </p>
@@ -60,11 +60,11 @@ export default function ContactMe() {
                     Contact Me
                 </h1>
                 <div className="flex flex-col lg:flex-row lg:space-x-8 lg:space-y-0 space-y-4 justify-center w-full max-w-5xl mx-auto mb-[2rem]">
-                    <div className="rounded-[10px] border-2 border-black-700 p-6 flex flex-col lg:w-[300px]">
+                    <div className="rounded-2xl border border-violet-200 bg-white/60 shadow-sm dark:border-slate-800 dark:bg-black p-6 flex flex-col lg:w-[300px]">
                         <h2 className={`text-[1.8rem] font-bold text-center mb-8 ${theme==="white"?"text-gray-800":"text-white"}`}>
                             Contact me for Collaboration
                         </h2>
-                        <p className={`text-gray-600 mb-[5rem] ${theme==="white"?"text-gray-600":"text-white"}`}>
+                        <p className={`text-gray-600 mb-6 ${theme==="white"?"text-gray-600":"text-white"}`}>
                             Feel free to reach out to me via any of the platforms below or send me a message directly and start collaborating on something amazing
                         </p>
                         <div className="flex gap-4">
@@ -79,7 +79,7 @@ export default function ContactMe() {
                             </a>
                         </div>
                     </div>
-                    <div className="rounded-[10px] border-2 border-black-700 p-6">
+                    <div className="rounded-[10px] border border-violet-200 bg-white/60 shadow-sm dark:border-slate-800 dark:bg-black p-6">
                         <form onSubmit={handleSubmit}>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                             <input

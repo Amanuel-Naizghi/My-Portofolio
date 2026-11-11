@@ -1,7 +1,6 @@
 import eit from '../assets/eit.jpeg';
 import odin from '../assets/odin.jpeg';
 import admas from '../assets/admas.jpeg';
-import passion from '../assets/passion.png';
 import myPhoto from '../assets/my-photo.jpeg';
 import { ThemeContext } from './ThemeContext';
 import { useContext } from 'react';
@@ -10,23 +9,23 @@ export default function About() {
     const {theme}=useContext(ThemeContext);
 
     return (
-      <div className={`${theme==='white'?"bg-white":"bg-black"}`}>
-             <div className="p-8 pt-5 mt-[4rem] flex flex-col items-center justify-center min-h-screen">
+      <div className={`${theme !== 'white' ? 'dark' : ''} ${theme==='white'?"bg-orange-50":"bg-black"}`}>
+             <div className="mx-auto max-w-6xl px-5 py-12 md:px-8 md:py-14 flex flex-col items-center">
                 <p className={`text-center mb-4 ${theme==="white"?"text-gray-600":"text-white"}`}>
                     Welcome to my portfolio!
                 </p>        
                 <h1 className={`text-3xl font-bold text-center mb-8 ${theme==="white"?"text-gray-800":"text-white"}`}>
                     About Me
                 </h1>
-                <div className="flex flex-col lg:grid lg:grid-cols-3 gap-[1rem] lg:h-[400px] lg:w-[800px] flex items-center ">
-                    <div className="lg:col-span-1 lg:row-span-2">
+                <div className="grid w-full grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 items-start">
+                    <div className="md:col-span-2 lg:col-span-1 lg:row-span-2">
                         <img
                         src={myPhoto}
                         alt="My Photo"
-                        className="w-full lg:h-[350px] h-[370px] w-[300px] object-cover rounded-full shadow-md"
+                        className="mx-auto aspect-square w-full max-w-xs rounded-3xl object-cover shadow-md"
                         />
                     </div>
-                    <div className="lg:col-span-1 border-2 border-black-700 flex p-2 lg:h-[270px]  lg:w-[280px] h-[250px] w-[300px] rounded-[10px]">
+                    <div className="border border-violet-200 bg-white/60 shadow-sm dark:border-slate-800 dark:bg-black flex p-5 rounded-2xl">
                         <div className="flex flex-col space-y-2">
                             <h2 className={`text-[1.2rem] font-bold text-center mb-4 ${theme==="white"?"text-gray-800":"text-white"}`}>
                                 Education
@@ -71,7 +70,7 @@ export default function About() {
                             
                         </div>
                     </div>
-                    <div className="col-span-1 p-2 border-2 border-black-700 flex m-3  lg:h-[270px] lg:w-[340px] rounded-[10px]">
+                    <div className="p-5 border border-violet-200 bg-white/60 shadow-sm dark:border-slate-800 dark:bg-black flex rounded-2xl">
                         <div className="flex flex-col space-y-2">
                         
                             <h2 className={`text-[1.2rem] font-bold text-center mb-4 ${theme==="white"?"text-gray-800":"text-white"}`}>
@@ -89,7 +88,7 @@ export default function About() {
                         </div>
                     </div>
                     {/* Second row, second column (spans two columns) */}
-                    <div className="col-span-2 lg:h-[120px] lg:w-[670px]">
+                    <div className="md:col-span-2 leading-relaxed">
                         <p className={`pl-[1rem] ${theme==="white"?"text-gray-600":"text-white"}`}>
                         Outside of development, I enjoy exploring the outdoors, reading, and connecting with people from different walks of life. My goal is to create meaningful impacts through technology.
                         </p>
